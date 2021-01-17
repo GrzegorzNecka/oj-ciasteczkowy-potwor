@@ -7,15 +7,17 @@ const setCookie = () => window.sessionStorage.setItem("cookie", "1");
 const checkCookieState = cookie => (cookie === "1") && (cookieInfo.style.display = "none");
 const delCookieAlert = () => checkCookieState(getCookie());
 
-
+delCookieAlert();
 
 const setCookieState = cookieInfo.addEventListener("click", e => {
+
   if (e.target.tagName != "BUTTON") {
     return;
   }
 
   setCookie();
   delCookieAlert();
+
 });
 
-delCookieAlert();
+
